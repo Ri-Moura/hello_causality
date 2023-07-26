@@ -1,0 +1,28 @@
+strict digraph  {
+address;
+Pstatus;
+studytime;
+failures;
+schoolsup;
+paid;
+higher;
+internet;
+famrel;
+absences;
+G1;
+G2;
+G3;
+address -> absences  [origin=learned, weight="1.0400683020889385"];
+Pstatus -> famrel  [origin=learned, weight="0.8564141862944177"];
+Pstatus -> absences  [origin=learned, weight="-1.0538470184538191"];
+studytime -> G1  [origin=learned, weight="0.8709913759349248"];
+failures -> absences  [origin=learned, weight="0.9395569276236658"];
+failures -> G1  [origin=unknown];
+schoolsup -> G1  [origin=learned, weight="-0.8005634512522485"];
+paid -> absences  [origin=learned, weight="-1.0534554188312115"];
+higher -> famrel  [origin=learned, weight="0.8884579608544309"];
+higher -> G1  [origin=learned, weight="2.7253005480917714"];
+internet -> absences  [origin=learned, weight="0.8368863182244379"];
+G1 -> G2  [origin=learned, weight="0.8873267945666895"];
+G2 -> G3  [origin=learned, weight="0.883056046685965"];
+}
